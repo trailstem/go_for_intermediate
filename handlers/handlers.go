@@ -6,12 +6,7 @@ import (
 	"net/http"
 )
 
-func HelloHandler(w http.ResponseWriter, req *http.Request) {
-	if req.Method == http.MethodGet {
-		io.WriteString(w, "Hello, world!!!!!!!!!!!!!!!!!!!!")
-	} else {
-		http.Error(w, "Invalid method", http.StatusMethodNotAllowed)
-	}
+func HelloHandler(w http.ResponseWriter, req *http.Request) { 
 	io.WriteString(w, "Hello, world!")
 }
 
